@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EdithLopez</title>
+    <title>EdithLopez - Portafolio</title>
 
-    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
-    <!-- Estilos -->
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="./00CSS/styles.css" />
   </head>
 
@@ -35,7 +33,7 @@
     <!-- Menú lateral (solo mobile) -->
     <nav id="side-menu">
       <ul>
-        <li><a href="./01index.html" class="activo">Inicio</a></li>
+        <li><a href="./index.html" class="activo">Inicio</a></li>
         <li><a href="./02sobre-mi.html">Sobre mí</a></li>
         <li><a href="./03proyectos.html">Proyectos</a></li>
         <li><a href="./04servicios.html">Servicios</a></li>
@@ -43,11 +41,11 @@
       </ul>
     </nav>
 
-    <!-- NavBar clásico (solo tablet y desktop) -->
+    <!-- Navbar (solo tablet y desktop) -->
     <header>
       <nav>
         <ul>
-          <li><a href="./01index.html" class="activo">Inicio</a></li>
+          <li><a href="./index.html" class="activo">Inicio</a></li>
           <li><a href="./02sobre-mi.html">Sobre mí</a></li>
           <li><a href="./03proyectos.html">Proyectos</a></li>
           <li><a href="./04servicios.html">Servicios</a></li>
@@ -56,22 +54,56 @@
       </nav>
     </header>
 
-    <!-- Sección principal -->
-    <section class="bg-dark-texture">
-      <div>
+    <!-- ====== AQUÍ VA EL CONTENIDO ESPECÍFICO DE CADA PÁGINA ====== -->
+
+    <!-- Sección Hero Principal -->
+    <section class="hero">
+      <div class="hero-img">
+        <img
+          src="./Assets/Imagenes/Foto con ilustracion.png"
+          alt="Foto de Edith López"
+        />
+      </div>
+
+      <div class="hero-texto">
         <h1>PORTAFOLIO</h1>
+        <div class="barra-decorativa"></div>
         <h2>UI Designer en formación</h2>
-        <p>Experiencia en diseño web y plataformas digitales</p>
+        <p>Experiencia en diseño web<br />y plataformas digitales</p>
+        <p>
+          ¡Hola! Soy Edith López,<br />
+          <strong>UI Designer</strong> en formación con background en
+          <strong>enfermería</strong> y una pasión enorme por
+          <strong
+            >transformar ideas en experiencias digitales funcionales</strong
+          >.
+        </p>
       </div>
     </section>
 
-    <!-- bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Navegación del footer -->
+      <div class="footer-nav">
+        <a href="./" class="activo">Inicio</a>
+        <a href="./02sobre-mi.html">Sobre mí</a>
+        <a href="./03proyectos.html">Proyectos</a>
+        <a href="./04servicios.html">Servicios</a>
+        <a href="./05contacto.html">Contacto</a>
+      </div>
 
+      <!-- Línea decorativa -->
+      <img
+        src="./Assets/Imagenes/27.png"
+        alt="línea decorativa"
+        class="footer-line-image"
+      />
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para el menú hamburguesa -->
     <script>
       const burger = document.getElementById("burger-btn");
       const menu = document.getElementById("side-menu");
@@ -120,24 +152,5 @@
         }
       });
     </script>
-
-    <!-- FOOTER COMPLETO -->
-    <footer class="footer">
-      <!-- Menú inferior -->
-      <div class="footer-nav">
-        <li><a href="./01index.html" class="activo">Inicio</a></li>
-        <li><a href="./02sobre-mi.html">Sobre mí</a></li>
-        <li><a href="./03proyectos.html">Proyectos</a></li>
-        <li><a href="./04servicios.html">Servicios</a></li>
-        <li><a href="./05contacto.html">Contacto</a></li>
-      </div>
-
-      <!-- Línea decorativa -->
-      <img
-        src="./Assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
-    </footer>
   </body>
 </html>

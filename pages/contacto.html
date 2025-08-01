@@ -56,15 +56,6 @@
       </nav>
     </header>
 
-    <!-- Sección principal -->
-    <section class="bg-dark-texture">
-      <div>
-        <h1>PORTAFOLIO</h1>
-        <h2>UI Designer en formación</h2>
-        <p>Experiencia en diseño web y plataformas digitales</p>
-      </div>
-    </section>
-
     <!-- bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -120,6 +111,32 @@
         }
       });
     </script>
+
+    <!-- CONTENIDO -->
+    <section class="contacto">
+      <div class="contacto__contenido">
+        <h2 class="contacto__titulo">¡Hablemos!</h2>
+        <p class="contacto__descripcion">
+          ¿Tienes un proyecto en mente o necesitas apoyo con diseño UI? Llena el
+          formulario y me pondré en contacto contigo muy pronto. Me encanta
+          colaborar con personas que quieren transformar ideas en experiencias
+          visuales claras, funcionales y bonitas.
+        </p>
+
+        <form class="contacto__formulario" action="#" method="POST">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
 
     <!-- FOOTER COMPLETO -->
     <footer class="footer">

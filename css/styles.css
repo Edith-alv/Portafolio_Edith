@@ -16,27 +16,63 @@ a {
 }
 
 body {
-  background: #000;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.content {
+  padding: 80px 20px;
+  background-color: #fdfbf7;
+  display: flex;
+  justify-content: center;
+}
+
+.content__contenido {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #2c2c2c;
 }
 
 /* =========================== ENCABEZADOS =========================== */
 h1 {
-  color: #f5f5dc;
-  font-size: 90px;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #663399;
+  margin-bottom: 16px;
 }
 
 h2 {
-  font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #663399;
 }
 
 h3 {
   font-size: 28px;
   font-weight: 400;
+}
+
+.sobre-mi .sobremi-encabezado {
+  display: flex;
+  align-items: stretch; /* <- importante */
+  justify-content: space-between;
+}
+
+.sobre-mi .sobremi-foto {
+  display: flex;
+  align-items: stretch;
+}
+
+.sobre-mi .sobremi-foto img {
+  height: 100%;
+  width: auto;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0; /* puedes quitarlo o ajustarlo */
 }
 
 /* =========================== NAVBAR DESKTOP/TABLET =========================== */
@@ -234,7 +270,6 @@ header nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 60px;
   padding: 80px 60px;
   background-color: #000;
@@ -246,7 +281,6 @@ header nav a:hover {
   width: 320px;
   max-width: 100%;
   border-radius: 50%;
-  display: block;
 }
 
 .hero-texto {
@@ -313,6 +347,115 @@ header nav a:hover {
     background-position: 0% 50%;
   }
 }
+.sobre-mi {
+  padding: 80px 40px;
+  background-color: #fdfbf7;
+}
+.sobre-mi .sobremi-encabezado {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto {
+  flex: 1;
+  max-width: 600px;
+  order: 1; /* Texto primero en desktop */
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto p strong {
+  font-weight: 700;
+  color: #fff;
+}
+.sobre-mi .sobremi-encabezado .sobremi-foto {
+  flex: 0 0 auto;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre-mi .sobremi-encabezado .sobremi-foto img {
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.sobre-mi .educacion,
+.sobre-mi .experiencia,
+.sobre-mi .herramientas {
+  margin-top: 80px;
+}
+.sobre-mi .educacion h3,
+.sobre-mi .experiencia h3,
+.sobre-mi .herramientas h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.sobre-mi .educacion p,
+.sobre-mi .experiencia p,
+.sobre-mi .herramientas p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.sobre-mi .etapas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.sobre-mi .etapas .etapa {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: left;
+}
+.sobre-mi .etapas img {
+  height: 40px;
+  margin-bottom: 12px;
+}
+.sobre-mi .cards-experiencia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.sobre-mi .cards-experiencia .card-exp {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 300px;
+}
+.sobre-mi .cards-experiencia img {
+  height: 40px;
+  margin-bottom: 12px;
+}
+.sobre-mi .iconos-herramientas {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.sobre-mi .iconos-herramientas img {
+  height: 40px;
+  filter: brightness(1.1);
+}
+
 /* =========================== FOOTER =========================== */
 .footer {
   position: relative;
@@ -475,6 +618,474 @@ header nav a:hover {
     text-align: left;
     margin: 0;
     width: 100%;
+  }
+}
+/* =========================== SOBRE MÍ RESPONSIVE =========================== */
+.sobre-mi {
+  padding: 80px 40px;
+  background-color: #000;
+}
+.sobre-mi .sobremi-encabezado {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto {
+  flex: 1;
+  max-width: 600px;
+  order: 1; /* Texto primero en desktop */
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.sobre-mi .sobremi-encabezado .sobremi-texto p strong {
+  font-weight: 700;
+  color: #fff;
+}
+.sobre-mi .sobremi-encabezado .sobremi-foto {
+  flex: 0 0 auto;
+  order: 2; /* Imagen segunda en desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre-mi .sobremi-encabezado .sobremi-foto img {
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* =========================== RESPONSIVE BREAKPOINTS =========================== */
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+  .sobre-mi {
+    padding: 60px 20px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    order: 2; /* Texto abajo en mobile */
+    max-width: 100%;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto {
+    order: 1; /* Imagen arriba en mobile */
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 200px;
+    height: 200px;
+    padding: 3px;
+  }
+}
+/* Mobile Landscape (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .sobre-mi {
+    padding: 70px 30px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    flex-direction: column;
+    gap: 35px;
+    text-align: center;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    order: 2; /* Texto abajo en mobile landscape */
+    max-width: 100%;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 42px;
+    margin-bottom: 18px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto {
+    order: 1; /* Imagen arriba en mobile landscape */
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 220px;
+    height: 220px;
+    padding: 4px;
+  }
+}
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sobre-mi {
+    padding: 75px 35px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    flex-direction: row; /* Volver a horizontal */
+    gap: 35px;
+    align-items: center;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    order: 1; /* Texto a la izquierda */
+    max-width: 500px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 52px;
+    margin-bottom: 18px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto {
+    order: 2; /* Imagen a la derecha */
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 250px;
+    height: 250px;
+  }
+}
+/* Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .sobre-mi {
+    padding: 80px 40px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    gap: 40px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    max-width: 550px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 58px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 18px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 280px;
+    height: 280px;
+  }
+}
+/* Large Desktop (1201px+) */
+@media (min-width: 1201px) {
+  .sobre-mi {
+    padding: 80px 40px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    gap: 50px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    max-width: 600px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 64px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* =========================== EFECTOS HOVER PARA DESKTOP =========================== */
+@media (min-width: 769px) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  }
+}
+/* =========================== ACCESIBILIDAD =========================== */
+/* Reducir animaciones para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    transition: none;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+}
+/* =========================== ORIENTACIÓN =========================== */
+/* Ajustes para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .sobre-mi {
+    padding: 40px 20px;
+  }
+  .sobre-mi .sobremi-encabezado {
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto {
+    order: 1;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-texto p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto {
+    order: 2;
+  }
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* =========================== FORMULARIO CONTACTO RESPONSIVE =========================== */
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 60px 24px;
+  }
+  .contacto h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .contacto p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .formulario-contacto form {
+    width: 100%;
+  }
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 15px;
+  }
+  .formulario-contacto button {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+}
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contacto {
+    padding: 80px 40px;
+  }
+  .formulario-contacto form {
+    width: 90%;
+  }
+}
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .formulario-contacto form {
+    max-width: 800px;
+  }
+}
+/* =========================== INDEX RESPONSIVE =========================== */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 100px 60px;
+  }
+  .hero__content {
+    margin-top: 0;
+    padding-left: 40px;
+  }
+  .hero__sparkle.sparkle--top {
+    top: 0;
+    left: -40px;
+  }
+  .hero__sparkle.sparkle--bottom {
+    right: -40px;
+  }
+}
+@media (max-width: 768px) {
+  .sobremi-foto img {
+    border-radius: 50%;
+  }
+}
+.servicios {
+  padding: 80px 20px;
+  background-color: hsl(40, 60%, 98%);
+  color: #663399;
+  text-align: center;
+}
+.servicios__encabezado {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+.servicios__encabezado .icono {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.servicios__titulo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #663399;
+  margin-bottom: 16px;
+}
+.servicios__descripcion {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #333;
+}
+.servicios__grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .servicios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .servicios__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .servicios__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.servicios__item {
+  background: #ddded5;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.servicios__item:hover {
+  transform: translateY(-8px);
+}
+.servicios__item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 16px;
+}
+.servicios__item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.servicios__item p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.contacto {
+  padding: 80px 20px;
+  background-color: #fdfbf7;
+  display: flex;
+  justify-content: center;
+}
+.contacto__contenido {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #2c2c2c;
+}
+.contacto__titulo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #663399;
+  margin-bottom: 16px;
+}
+.contacto__descripcion {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #333;
+}
+.contacto__formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.contacto__formulario label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #663399;
+}
+.contacto__formulario input,
+.contacto__formulario textarea {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  transition: border-color 0.3s ease;
+}
+.contacto__formulario input:focus,
+.contacto__formulario textarea:focus {
+  outline: none;
+  border-color: #d17dd0;
+}
+.contacto__formulario button {
+  background: linear-gradient(90deg, #7c69e1, #d17dd0, #e9c79c, #7c69e1);
+  background-size: 300% 100%;
+  animation: gradientFlow 6s ease infinite;
+  border: none;
+  color: #fff;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+.contacto__formulario button:hover {
+  opacity: 0.9;
+}
+
+/* Animación del botón con tu gradiente */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

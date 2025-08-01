@@ -1,0 +1,26 @@
+// ======================= main.scss =======================
+// Este archivo importa todos los módulos parciales (.scss)
+
+// Reset general y tipografía
+@import "reset";
+
+// Navegación (navbar y menú lateral)
+@import "navbar";
+
+// Sección hero del index
+@import "hero";
+
+// Sección Sobre mí
+@import "sobre-mi";
+
+// Footer del sitio
+@import "footer";
+
+// Media queries globales
+@import "media";
+
+// servicios
+@import "./servicios";
+
+//contacto
+@import "./contacto";

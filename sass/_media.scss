@@ -1,0 +1,530 @@
+/* =========================== RESPONSIVE DESIGN =========================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 60px 24px 40px;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .hero-texto {
+    align-items: flex-start;
+  }
+
+  .hero-texto h2 {
+    border-bottom: none;
+    margin-bottom: 4px;
+  }
+
+  .barra-decorativa {
+    margin: 0;
+  }
+
+  .hero-img img {
+    margin: 0;
+  }
+
+  .hero-texto .intro {
+    text-align: left;
+    padding: 14px;
+  }
+
+  .footer {
+    padding: 40px 20px 30px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+  }
+}
+
+/* Tablet y Desktop */
+@media (min-width: 769px) {
+  .burger {
+    display: none !important;
+  }
+
+  #side-menu {
+    display: none !important;
+  }
+
+  .menu-overlay {
+    display: none !important;
+  }
+}
+
+/* Tablet específico */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header nav ul {
+    gap: 30px;
+  }
+
+  header nav a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hero-img img {
+    max-height: 360px;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .hero-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 360px;
+  }
+
+  .hero-texto .intro {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* =========================== SOBRE MÍ RESPONSIVE =========================== */
+
+.sobre-mi {
+  padding: 80px 40px;
+  background-color: #000;
+
+  .sobremi-encabezado {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    .sobremi-texto {
+      flex: 1;
+      max-width: 600px;
+      order: 1; /* Texto primero en desktop */
+
+      h2 {
+        font-size: 64px;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        color: #fff;
+
+        strong {
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+    }
+
+    .sobremi-foto {
+      flex: 0 0 auto;
+      order: 2; /* Imagen segunda en desktop */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+        padding: 5px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+/* =========================== RESPONSIVE BREAKPOINTS =========================== */
+
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+  .sobre-mi {
+    padding: 60px 20px;
+
+    .sobremi-encabezado {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+      justify-content: center;
+
+      .sobremi-texto {
+        order: 2; /* Texto abajo en mobile */
+        max-width: 100%;
+
+        h2 {
+          font-size: 36px;
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 1.6;
+          margin-bottom: 16px;
+          text-align: left;
+        }
+      }
+
+      .sobremi-foto {
+        order: 1; /* Imagen arriba en mobile */
+
+        img {
+          width: 200px;
+          height: 200px;
+          padding: 3px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Landscape (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .sobre-mi {
+    padding: 70px 30px;
+
+    .sobremi-encabezado {
+      flex-direction: column;
+      gap: 35px;
+      text-align: center;
+
+      .sobremi-texto {
+        order: 2; /* Texto abajo en mobile landscape */
+        max-width: 100%;
+
+        h2 {
+          font-size: 42px;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 18px;
+          text-align: left;
+        }
+      }
+
+      .sobremi-foto {
+        order: 1; /* Imagen arriba en mobile landscape */
+
+        img {
+          width: 220px;
+          height: 220px;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sobre-mi {
+    padding: 75px 35px;
+
+    .sobremi-encabezado {
+      flex-direction: row; /* Volver a horizontal */
+      gap: 35px;
+      align-items: center;
+
+      .sobremi-texto {
+        order: 1; /* Texto a la izquierda */
+        max-width: 500px;
+
+        h2 {
+          font-size: 52px;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 1.6;
+        }
+      }
+
+      .sobremi-foto {
+        order: 2; /* Imagen a la derecha */
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+/* Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .sobre-mi {
+    padding: 80px 40px;
+
+    .sobremi-encabezado {
+      gap: 40px;
+
+      .sobremi-texto {
+        max-width: 550px;
+
+        h2 {
+          font-size: 58px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .sobremi-foto {
+        img {
+          width: 280px;
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+
+/* Large Desktop (1201px+) */
+@media (min-width: 1201px) {
+  .sobre-mi {
+    padding: 80px 40px;
+
+    .sobremi-encabezado {
+      gap: 50px;
+
+      .sobremi-texto {
+        max-width: 600px;
+
+        h2 {
+          font-size: 64px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.7;
+        }
+      }
+
+      .sobremi-foto {
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+/* =========================== EFECTOS HOVER PARA DESKTOP =========================== */
+@media (min-width: 769px) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* =========================== ACCESIBILIDAD =========================== */
+
+/* Reducir animaciones para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    transition: none;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .sobre-mi .sobremi-encabezado .sobremi-foto img {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* =========================== ORIENTACIÓN =========================== */
+
+/* Ajustes para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .sobre-mi {
+    padding: 40px 20px;
+
+    .sobremi-encabezado {
+      flex-direction: row;
+      gap: 25px;
+      align-items: center;
+
+      .sobremi-texto {
+        order: 1;
+
+        h2 {
+          font-size: 28px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .sobremi-foto {
+        order: 2;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+/* =========================== FORMULARIO CONTACTO RESPONSIVE =========================== */
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 60px 24px;
+  }
+
+  .contacto h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .contacto p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .formulario-contacto form {
+    width: 100%;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 15px;
+  }
+
+  .formulario-contacto button {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contacto {
+    padding: 80px 40px;
+  }
+
+  .formulario-contacto form {
+    width: 90%;
+  }
+}
+
+/* Escritorio grande */
+@media (min-width: 1200px) {
+  .formulario-contacto form {
+    max-width: 800px;
+  }
+}
+
+/* =========================== INDEX RESPONSIVE =========================== */
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 100px 60px;
+  }
+
+  .hero__content {
+    margin-top: 0;
+    padding-left: 40px;
+  }
+
+  .hero__sparkle.sparkle--top {
+    top: 0;
+    left: -40px;
+  }
+
+  .hero__sparkle.sparkle--bottom {
+    right: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobremi-foto img {
+    border-radius: 50%;
+  }
+}

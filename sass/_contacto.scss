@@ -1,0 +1,89 @@
+.contacto {
+  padding: 80px 20px;
+  background-color: #fdfbf7;
+  display: flex;
+  justify-content: center;
+
+  &__contenido {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #2c2c2c;
+  }
+
+  &__titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #663399;
+    margin-bottom: 16px;
+  }
+
+  &__descripcion {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  &__formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #663399;
+    }
+
+    input,
+    textarea {
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 24px;
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #d17dd0;
+    }
+
+    button {
+      background: linear-gradient(90deg, #7c69e1, #d17dd0, #e9c79c, #7c69e1);
+      background-size: 300% 100%;
+      animation: gradientFlow 6s ease infinite;
+      border: none;
+      color: #fff;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      text-align: center;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Animación del botón con tu gradiente */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- bootstrap -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí - Edith López</title>
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833pzpbDp+XdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
 
-    <!-- Estilos -->
+    <!-- estilos -->
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body>
-    <!-- Botón hamburguesa (solo mobile) -->
+    <!-- Botón hamburguesa -->
     <button class="burger" id="burger-btn">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Overlay para cerrar menú -->
+    <!-- Overlay -->
     <div class="menu-overlay" id="menu-overlay"></div>
 
-    <!-- Menú lateral (solo mobile) -->
+    <!-- Menú lateral mobile -->
     <nav id="side-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -39,7 +39,7 @@
       </ul>
     </nav>
 
-    <!-- NavBar clásico (solo tablet y desktop) -->
+    <!-- Navbar desktop/tablet -->
     <header>
       <nav>
         <ul>
@@ -52,44 +52,138 @@
       </nav>
     </header>
 
-    <!-- Sección principal -->
-    <section class="bg-dark-texture">
-      <div>
-        <h1>SOBRE MÍ</h1>
-        <h2>UI Designer en formación</h2>
-        <p>Experiencia en diseño web y plataformas digitales</p>
+    <!-- Contenido principal -->
+    <section class="sobre-mi">
+      <!-- Presentación -->
+
+      <div class="sobremi-encabezado">
+        <div class="sobremi-texto">
+          <h2>Sobre mí</h2>
+          <p>
+            Mi nombre es Edith, y aunque <strong>mi camino profesional</strong>
+            comenzó en la enfermería —de la cual tengo título— siempre tuve una
+            <strong>fuerte atracción por el mundo digital</strong>.
+          </p>
+          <p>
+            En 2024 decidí dar el salto y comenzar mi formación en
+            <strong>diseño UX/UI</strong>, convencida de que el diseño también
+            puede <strong>sanar, conectar y transformar</strong>.
+          </p>
+        </div>
       </div>
+
+      <!-- Educación -->
+      <section class="educacion">
+        <h3>Educación</h3>
+        <p>Actualmente curso la carrera de Desarrollo UX/UI en Coderhouse.</p>
+
+        <div class="etapas">
+          <div class="etapa">
+            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
+            <p>
+              <strong>Photoshop e Illustrator</strong><br />junio – agosto 2024
+            </p>
+          </div>
+
+          <div class="etapa">
+            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
+            <p><strong>Diseño UX/UI básico</strong><br />ago – nov 2024</p>
+          </div>
+          <div class="etapa">
+            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
+            <p><strong>Diseño UX/UI avanzado</strong><br />mar – jun 2024</p>
+          </div>
+          <div class="etapa">
+            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
+            <p><strong>Desarrollo Web</strong><br />En curso</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia -->
+      <section class="experiencia">
+        <h3>Experiencia Laboral</h3>
+        <p>
+          Desde hace más de 6 meses me desempeño como
+          <strong>UI Designer</strong> en prácticas dentro de una empresa de
+          tecnología...
+        </p>
+        <div class="cards-experiencia">
+          <div class="card-exp">
+            <img src="../Assets/Imagenes/WIX.png" alt="Wix" />
+            <p>
+              <strong>Diseño web en Wix Studio</strong><br />Desde cero a
+              publicado, mantenimiento y actualizaciones.
+            </p>
+          </div>
+          <div class="card-exp">
+            <img src="../Assets/Imagenes/Figma.png" alt="Plataforma" />
+            <p>
+              <strong>Plataforma de verificación</strong><br />Responsive UI,
+              prototipos navegables, handoffs.
+            </p>
+          </div>
+          <div class="card-exp">
+            <img src="../Assets/Imagenes/Handoff.png" alt="White Label" />
+            <p>
+              <strong>Visual white-label</strong><br />Adaptación de experiencia
+              para distintas marcas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Herramientas -->
+      <section class="herramientas">
+        <h3>Software y Herramientas</h3>
+        <div class="iconos-herramientas">
+          <img src="../Assets/Imagenes/FigmaSoftwarew.png" alt="Figma" />
+          <img src="../Assets/Imagenes/software - wix.png" alt="Wix" />
+          <img
+            src="../Assets/Imagenes/software - ps ai.png"
+            alt="Photoshop e Illustrator"
+          />
+          <img src="../Assets/Imagenes/VS.png" alt="VS Code" />
+        </div>
+      </section>
     </section>
 
-    <!-- bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <!-- =================== FOOTER COMPLETO =================== -->
+    <footer class="footer">
+      <div class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="./sobre-mi.html" class="activo">Sobre mí</a>
+        <a href="./proyectos.html">Proyectos</a>
+        <a href="./servicios.html">Servicios</a>
+        <a href="./contacto.html">Contacto</a>
+      </div>
 
+      <img
+        src="../assets/imagenes/27.png"
+        alt="línea decorativa"
+        class="footer-line-image"
+      />
+    </footer>
+
+    <!-- =================== SCRIPT MENU =================== -->
     <script>
       const burger = document.getElementById("burger-btn");
       const menu = document.getElementById("side-menu");
       const overlay = document.getElementById("menu-overlay");
 
-      // Función para abrir/cerrar menú
       function toggleMenu() {
         burger.classList.toggle("open");
         menu.classList.toggle("open");
         overlay.classList.toggle("open");
 
-        // Prevenir scroll del body cuando el menú está abierto
         document.body.style.overflow = menu.classList.contains("open")
           ? "hidden"
           : "auto";
       }
 
-      // Event listeners
       burger.addEventListener("click", toggleMenu);
       overlay.addEventListener("click", toggleMenu);
 
-      // Cerrar menú al hacer clic en un enlace
       document.querySelectorAll("#side-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           burger.classList.remove("open");
@@ -99,14 +193,12 @@
         });
       });
 
-      // Cerrar menú con tecla Escape
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && menu.classList.contains("open")) {
           toggleMenu();
         }
       });
 
-      // Manejar redimensionamiento de ventana
       window.addEventListener("resize", () => {
         if (window.innerWidth > 768 && menu.classList.contains("open")) {
           burger.classList.remove("open");
@@ -116,34 +208,5 @@
         }
       });
     </script>
-
-    <!-- FOOTER COMPLETO -->
-    <footer class="footer">
-      <!-- Menú inferior -->
-      <div class="footer-nav">
-        <ul>
-          <a href="../index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="./sobre-mi.html" class="activo">Sobre mí</a>
-        </ul>
-        <ul>
-          <a href="./proyectos.html">Proyectos</a>
-        </ul>
-        <ul>
-          <a href="./servicios.html">Servicios</a>
-        </ul>
-        <ul>
-          <a href="./contacto.html">Contacto</a>
-        </ul>
-      </div>
-
-      <!-- Línea decorativa -->
-      <img
-        src="../assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
-    </footer>
   </body>
 </html>

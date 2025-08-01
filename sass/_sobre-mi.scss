@@ -1,0 +1,122 @@
+.sobre-mi {
+  padding: 80px 40px;
+  background-color: #fdfbf7;
+
+  .sobremi-encabezado {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    .sobremi-texto {
+      flex: 1;
+      max-width: 600px;
+      order: 1; /* Texto primero en desktop */
+
+      h2 {
+        font-size: 64px;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        color: #fff;
+
+        strong {
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+    }
+
+    .sobremi-foto {
+      flex: 0 0 auto;
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+        padding: 5px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .educacion,
+  .experiencia,
+  .herramientas {
+    margin-top: 80px;
+
+    h3 {
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+  }
+
+  .etapas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+
+    .etapa {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      text-align: left;
+    }
+
+    img {
+      height: 40px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .cards-experiencia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .card-exp {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      max-width: 300px;
+    }
+
+    img {
+      height: 40px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .iconos-herramientas {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    img {
+      height: 40px;
+      filter: brightness(1.1);
+    }
+  }
+}

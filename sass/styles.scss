@@ -230,88 +230,57 @@ header nav a:hover {
 }
 
 /* =========================== SECCIÓN HERO =========================== */
-.hero {
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #7c69e1, #d17dd0, #e9c79c);
+  padding: 15px 0;
+}
+
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  padding: 80px 60px;
-  background-color: #000;
-  position: relative;
-  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.hero-img img {
-  width: 320px;
-  max-width: 100%;
-  border-radius: 50%;
-  display: block;
-}
-
-.hero-texto {
-  color: white;
-  max-width: 600px;
+.nav__list {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+  list-style: none;
+  gap: 40px;
 }
 
-.hero-texto h1 {
-  font-size: clamp(40px, 6vw, 64px);
-  font-weight: 800;
-  margin-bottom: 0;
-}
-
-.hero-texto h2 {
-  font-size: clamp(20px, 4vw, 28px);
-  font-weight: 700;
-  border-bottom: 2px solid white;
-  padding-bottom: 4px;
-  margin-top: 20px;
-}
-
-.hero-texto p {
-  font-size: clamp(14px, 2vw, 18px);
-  line-height: 1.6;
-}
-
-.hero-texto .intro {
-  font-size: 16px;
-  background-color: #000;
-  padding: 14px 18px;
-  border-radius: 12px;
-  font-weight: 400;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-  width: 100%;
-}
-
-.hero-texto .intro strong {
-  font-weight: 700;
+.nav__link {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-/* =========================== BARRA DECORATIVA ANIMADA =========================== */
+.nav__link:hover,
+.nav__link--active {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================== HERO SECTION =========================== */
+
 .barra-decorativa {
-  height: 14px;
-  width: 450px;
+  height: 12px;
+  width: 100%;
+  max-width: 300px;
+  background: linear-gradient(to right, #7c69e1, #d17dd0, #e9c79c);
   border-radius: 20px;
-  background: linear-gradient(90deg, #7c69e1, #d17dd0, #e9c79c, #7c69e1);
-  background-size: 400% 100%;
-  animation: gradientFlow 6s ease infinite;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  margin: 15px 0;
 }
 
 /* =========================== FOOTER =========================== */
@@ -375,49 +344,57 @@ header nav a:hover {
     display: flex;
   }
 
-  h1 {
-    font-size: 32px;
+  .hero {
+    min-height: 100vh !important; /* En mobile usa toda la altura de pantalla */
+    padding: 80px 24px 40px !important;
+    flex-wrap: wrap !important; /* En mobile sí permitir wrap */
   }
 
-  h2 {
-    font-size: 18px;
+  .hero-contenedor {
+    flex-direction: column !important;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  .hero-img {
+    order: 1 !important; /* En mobile la imagen va arriba */
+  }
+
+  .hero-img img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .hero-texto {
+    order: 2 !important; /* En mobile el texto va abajo */
+    text-align: center !important;
+    max-width: 100% !important;
+    align-items: center !important;
+  }
+
+  .hero-texto h1 {
+    font-size: 48px !important;
+  }
+
+  .hero-texto h2 {
+    font-size: 24px !important;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   body {
     font-size: 14px;
   }
 
-  .hero {
-    flex-direction: column;
-    padding: 60px 24px 40px;
-    gap: 40px;
-    text-align: left;
-  }
-
-  .hero-texto {
-    align-items: flex-start;
-  }
-
-  .hero-texto h2 {
-    border-bottom: none;
-    margin-bottom: 4px;
-  }
-
   .barra-decorativa {
-    margin: 0;
-  }
-
-  .hero-img img {
-    margin: 0;
-  }
-
-  .hero-texto .intro {
-    text-align: left;
-    padding: 14px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .footer {
@@ -460,46 +437,37 @@ header nav a:hover {
     font-size: 16px;
     padding: 8px 12px;
   }
+
+  .hero-contenedor {
+    gap: 40px;
+  }
+
+  .hero-img img {
+    width: 280px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1025px) {
-  .hero {
-    align-items: flex-start;
-  }
-
-  .hero-img {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  .hero-contenedor {
+    gap: 80px;
   }
 
   .hero-img img {
-    max-height: 360px;
-    height: 100%;
-    width: auto;
-    object-fit: cover;
+    width: 360px;
+    height: 360px;
   }
 
   .hero-texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    min-height: 360px;
-  }
-
-  .hero-texto .intro {
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    border-radius: 0;
-    font-size: 16px;
-    text-align: left;
-    margin: 0;
-    width: 100%;
+    max-width: 600px;
   }
 }

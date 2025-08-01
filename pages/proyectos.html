@@ -57,13 +57,144 @@
     </header>
 
     <!-- Sección principal -->
-    <section class="bg-dark-texture">
-      <div>
-        <h1>PORTAFOLIO</h1>
-        <h2>UI Designer en formación</h2>
-        <p>Experiencia en diseño web y plataformas digitales</p>
-      </div>
+    
+    </style>
+</head>
+<body>
+
+    <!-- Sección Proyectos -->
+    <section class="proyectos" id="proyectos">
+        <div class="proyectos__container">
+            <!-- Header de la sección -->
+            <div class="proyectos__header">
+                <h2 class="proyectos__title">MIS PROYECTOS</h2>
+                <p class="proyectos__subtitle">Explora mi trabajo como UI Designer en formación</p>
+                <div class="barra-decorativa"></div>
+            </div>
+
+            <!-- Grid de proyectos -->
+            <div class="proyectos__grid">
+                
+                <!-- Proyecto 1: App de Plantas (Destacado) -->
+                <article class="proyecto proyecto--destacado">
+                    <div class="proyecto__status">Proyecto Académico</div>
+                    <div class="proyecto__image">
+                        <div class="proyecto__placeholder">🌱</div>
+                    </div>
+                    <div class="proyecto__content">
+                        <span class="proyecto__category">Aplicación Móvil</span>
+                        <h3 class="proyecto__title">PlantCare - App para Cuidado de Plantas</h3>
+                        <p class="proyecto__description">
+                            Aplicación móvil diseñada como proyecto académico para ayudar a los usuarios a cuidar sus plantas. 
+                            Incluye recordatorios de riego, identificación de plantas, consejos de cuidado y una comunidad 
+                            de amantes de las plantas.
+                        </p>
+                        <div class="proyecto__tech">
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Prototipado</span>
+                            <span class="tech-tag">User Research</span>
+                            <span class="tech-tag">Mobile First</span>
+                        </div>
+                        <div class="proyecto__actions">
+                            <a href="#" class="btn btn--primary">
+                                <span>👁️</span> Ver Prototipo
+                            </a>
+                            <a href="#" class="btn btn--secondary">
+                                <span>📱</span> Proceso de Diseño
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Sitio Web -->
+                <article class="proyecto">
+                    <div class="proyecto__status">Práctica Profesional</div>
+                    <div class="proyecto__image">
+                        <div class="proyecto__placeholder">🌐</div>
+                    </div>
+                    <div class="proyecto__content">
+                        <span class="proyecto__category">Desarrollo Web</span>
+                        <h3 class="proyecto__title">Sitio Web Corporativo</h3>
+                        <p class="proyecto__description">
+                            Desarrollo y diseño de sitio web corporativo durante mi práctica profesional. 
+                            Enfoque en experiencia de usuario, diseño responsivo y optimización para 
+                            motores de búsqueda.
+                        </p>
+                        <div class="proyecto__tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                        <div class="proyecto__actions">
+                            <a href="#" class="btn btn--primary">
+                                <span>🚀</span> Ver Sitio
+                            </a>
+                            <a href="#" class="btn btn--secondary">
+                                <span>💻</span> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: Próximo Proyecto -->
+                <article class="proyecto">
+                    <div class="proyecto__status">En Desarrollo</div>
+                    <div class="proyecto__image">
+                        <div class="proyecto__placeholder">🚧</div>
+                    </div>
+                    <div class="proyecto__content">
+                        <span class="proyecto__category">UI/UX Design</span>
+                        <h3 class="proyecto__title">Próximo Proyecto</h3>
+                        <p class="proyecto__description">
+                            Actualmente trabajando en un nuevo proyecto que combina mis habilidades 
+                            en diseño UI/UX con mi background en enfermería. Una plataforma digital 
+                            para mejorar la experiencia del paciente.
+                        </p>
+                        <div class="proyecto__tech">
+                            <span class="tech-tag">En Progreso</span>
+                            <span class="tech-tag">UI Design</span>
+                            <span class="tech-tag">Healthcare</span>
+                            <span class="tech-tag">Research</span>
+                        </div>
+                        <div class="proyecto__actions">
+                            <a href="#" class="btn btn--secondary">
+                                <span>⏳</span> Próximamente
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
     </section>
+
+    <script>
+        // Animación de entrada para los proyectos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los proyectos
+        document.querySelectorAll('.proyecto').forEach(proyecto => {
+            proyecto.style.opacity = '0';
+            proyecto.style.transform = 'translateY(30px)';
+            proyecto.style.transition = 'all 0.6s ease';
+            observer.observe(proyecto);
+        });
+    </script>
 
     <!-- bootstrap JS -->
     <script

@@ -1,19 +1,19 @@
 /* =========================== FOOTER =========================== */
 .footer {
   position: relative;
-  background-color: #000;
+  background-color: #483d88;
   color: white;
-  padding: 60px 40px 40px;
+  padding: 20px 24px;
   text-align: center;
   overflow: hidden;
-  min-height: 300px;
+  min-height: auto;
 }
 
 .footer-nav {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 40px;
+  gap: 28px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
@@ -41,8 +41,10 @@
 }
 
 .footer-line-image {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto 50px;
   display: block;
+  width: 85%;
+  height: 80px;
+  margin: 0% auto 0;
+  border-radius: 8px;
+  object-fit: fill;
 }

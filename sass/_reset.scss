@@ -1,9 +1,11 @@
-/* =========================== RESET Y TIPOGRAFÍA =========================== */
+/* =========================== RESET =========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =========================== TIPOGRAFIA =========================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -15,46 +17,94 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.content {
-  padding: 80px 20px;
-  background-color: #fdfbf7;
-  display: flex;
-  justify-content: center;
-}
-
-.content__contenido {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #2c2c2c;
-}
-
-/* =========================== ENCABEZADOS =========================== */
 h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 800;
   color: #663399;
   margin-bottom: 16px;
 }
 
 h2 {
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #663399;
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+body {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================== CONTENEDORES =========================== */
+
+.section {
+  padding: 80px 20px;
+  background-color: hsl(40, 60%, 98%);
+  color: #663399;
+  text-align: center;
+
+  &__header {
+    max-width: 800px;
+    margin: 0 auto 60px;
+
+    .icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/* =========================== pendiente =========================== */
 
 .sobre-mi .sobremi-encabezado {
   display: flex;

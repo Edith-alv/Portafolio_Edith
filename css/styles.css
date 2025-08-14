@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* =========================== RESET Y TIPOGRAFÍA =========================== */
+/* =========================== RESET =========================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* =========================== TIPOGRAFIA =========================== */
 body,
 h1,
 h2,
@@ -15,47 +16,92 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.content {
-  padding: 80px 20px;
-  background-color: #fdfbf7;
-  display: flex;
-  justify-content: center;
-}
-
-.content__contenido {
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #2c2c2c;
-}
-
-/* =========================== ENCABEZADOS =========================== */
 h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 800;
   color: #663399;
   margin-bottom: 16px;
 }
 
 h2 {
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #663399;
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+body {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================== CONTENEDORES =========================== */
+.section {
+  padding: 80px 20px;
+  background-color: hsl(40, 60%, 98%);
+  color: #663399;
+  text-align: center;
+}
+.section__header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+.section__header .icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.section .grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .section .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .section .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.section .card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.section .card:hover {
+  transform: translateY(-8px);
+}
+.section .card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+/* =========================== pendiente =========================== */
 .sobre-mi .sobremi-encabezado {
   display: flex;
   align-items: stretch; /* <- importante */
@@ -459,19 +505,19 @@ header nav a:hover {
 /* =========================== FOOTER =========================== */
 .footer {
   position: relative;
-  background-color: #000;
+  background-color: #483d88;
   color: white;
-  padding: 60px 40px 40px;
+  padding: 20px 24px;
   text-align: center;
   overflow: hidden;
-  min-height: 300px;
+  min-height: auto;
 }
 
 .footer-nav {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 40px;
+  gap: 28px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
@@ -499,10 +545,12 @@ header nav a:hover {
 }
 
 .footer-line-image {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto 50px;
   display: block;
+  width: 85%;
+  height: 80px;
+  margin: 0% auto 0;
+  border-radius: 8px;
+  object-fit: fill;
 }
 
 /* =========================== RESPONSIVE DESIGN =========================== */
@@ -949,18 +997,6 @@ header nav a:hover {
   font-size: 24px;
   margin-right: 10px;
 }
-.servicios__titulo {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #663399;
-  margin-bottom: 16px;
-}
-.servicios__descripcion {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  line-height: 1.6;
-  color: #333;
-}
 .servicios__grid {
   display: grid;
   gap: 40px;
@@ -996,16 +1032,6 @@ header nav a:hover {
   width: 80px;
   height: auto;
   margin-bottom: 16px;
-}
-.servicios__item h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.servicios__item p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
 }
 
 .contacto {

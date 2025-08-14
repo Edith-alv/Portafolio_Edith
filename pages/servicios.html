@@ -56,13 +56,122 @@
       </nav>
     </header>
 
-    <!-- bootstrap JS -->
+    <!-- CONTENIDO -->
+    <main>
+      <section class="section">
+        <div class="section__header">
+          <h1>Servicios</h1>
+          <p>
+            Todos mis procesos están guiados por
+            <strong>principios de diseño centrado en el usuario</strong>,
+            claridad visual y atención al detalle.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <img src="..//assets/img/research.png" alt="Research UX" />
+            <h3>Research UX</h3>
+            <p>
+              Comprendo el contexto, al usuario y las oportunidades de mejora.
+            </p>
+          </article>
+
+          <article class="card">
+            <img
+              src="..//assets/img/arquitectura-informacion.png"
+              alt="Arquitectura de información"
+            />
+            <h3>Arquitectura de información</h3>
+            <p>
+              Organizo el contenido y funcionalidades de forma clara y lógica.
+            </p>
+          </article>
+
+          <article class="card">
+            <img
+              src="..//assets/img/diseño-interfaces.png"
+              alt="Diseño de interfaces UI"
+            />
+            <h3>Diseño de interfaces UI</h3>
+            <p>
+              Construyo pantallas visuales claras, accesibles y centradas en el
+              usuario.
+            </p>
+          </article>
+
+          <article class="card">
+            <img src="..//assets/img/design-system.png" alt="Design System" />
+            <h3>Design System</h3>
+            <p>
+              Organizo los pilares visuales y funcionales de un producto para
+              lograr coherencia y eficiencia.
+            </p>
+          </article>
+
+          <article class="card">
+            <img
+              src="..//assets/img/prototipo.png"
+              alt="Prototipado interactivo"
+            />
+            <h3>Prototipado interactivo</h3>
+            <p>Valido ideas antes de pasar a desarrollo.</p>
+          </article>
+
+          <article class="card">
+            <img src="..//assets/img/dev-handoff.png" alt="Dev Handoff" />
+            <h3>Dev Handoff</h3>
+            <p>Facilito una implementación fluida y sin fricciones.</p>
+          </article>
+
+          <article class="card">
+            <img src="..//assets/img/scrum.png" alt="Metodología SCRUM" />
+            <h3>Metodología SCRUM</h3>
+            <p>
+              Trabajo en ciclos ágiles con comunicación y entregas constantes.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="footer">
+      <!-- Menú inferior -->
+      <div class="footer-nav">
+        <ul>
+          <a href="../index.html">Inicio</a>
+        </ul>
+        <ul>
+          <a href="./sobre-mi.html">Sobre mí</a>
+        </ul>
+        <ul>
+          <a href="./proyectos.html">Proyectos</a>
+        </ul>
+        <ul>
+          <a href="./servicios.html" class="activo">Servicios</a>
+        </ul>
+        <ul>
+          <a href="./contacto.html">Contacto</a>
+        </ul>
+      </div>
+
+      <!-- Línea decorativa -->
+      <img
+        src="../assets/img/linea-decorativa-footer.png"
+        alt="línea decorativa"
+        class="footer-line-image"
+      />
+    </footer>
+
+    <!-- bootstrap JS (al final) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
 
+    <!-- JS del menú hamburguesa (al final) -->
     <script>
       const burger = document.getElementById("burger-btn");
       const menu = document.getElementById("side-menu");
@@ -111,115 +220,5 @@
         }
       });
     </script>
-
-    <!-- CONTENIDO -->
-
-    <section class="servicios">
-      <div class="servicios__encabezado">
-        <h2 class="servicios__titulo"><span class="icono"></span> Servicios</h2>
-        <div class="servicios__decorador"></div>
-        <p class="servicios__descripcion">
-          Todos mis procesos están guiados por
-          <strong
-            >principios de diseño centrado en el usuario, claridad visual y
-            atención al detalle.</strong
-          >
-        </p>
-      </div>
-
-      <div class="servicios__grid">
-        <div class="servicios__item">
-          <img src="../assets/Imagenes/Research.png" alt="Research UX" />
-          <h3>Research UX</h3>
-          <p>
-            Comprendo el contexto, al usuario y las oportunidades de mejora.
-          </p>
-        </div>
-
-        <div class="servicios__item">
-          <img
-            src="../assets/Imagenes/Arquitectura.png"
-            alt="Arquitectura de información"
-          />
-          <h3>Arquitectura de información</h3>
-          <p>
-            Organizo el contenido y funcionalidades de forma clara y lógica.
-          </p>
-        </div>
-
-        <div class="servicios__item">
-          <img
-            src="../assets/Imagenes/DiseñoUI.png"
-            alt="Diseño de interfaces UI"
-          />
-          <h3>Diseño de interfaces UI</h3>
-          <p>
-            Construyo pantallas visuales claras, accesibles y centradas en el
-            usuario.
-          </p>
-        </div>
-
-        <div class="servicios__item">
-          <img src="../assets/Imagenes/Design system.png" alt="Design System" />
-          <h3>Design System</h3>
-          <p>
-            Organizo los pilares visuales y funcionales de un producto para
-            lograr coherencia y eficiencia.
-          </p>
-        </div>
-
-        <div class="servicios__item">
-          <img
-            src="../assets/Imagenes/prototipo.png"
-            alt="Prototipado interactivo"
-          />
-          <h3>Prototipado interactivo</h3>
-          <p>Valido ideas antes de pasar a desarrollo.</p>
-        </div>
-
-        <div class="servicios__item">
-          <img src="../assets/Imagenes/dev Handoff.png" alt="Dev Handoff" />
-          <h3>Dev Handoff</h3>
-          <p>Facilito una implementación fluida y sin fricciones.</p>
-        </div>
-
-        <div class="servicios__item">
-          <img src="../assets/Imagenes/scrum.png" alt="Metodología SCRUM" />
-          <h3>Metodología SCRUM</h3>
-          <p>
-            Trabajo en ciclos ágiles con comunicación y entregas constantes.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER COMPLETO -->
-    <footer class="footer">
-      <!-- Menú inferior -->
-      <div class="footer-nav">
-        <ul>
-          <a href="../index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="./sobre-mi.html">Sobre mí</a>
-        </ul>
-        <ul>
-          <a href="./proyectos.html">Proyectos</a>
-        </ul>
-        <ul>
-          <a href="./servicios.html" class="activo">Servicios</a>
-        </ul>
-        <ul>
-          <a href="./contacto.html">Contacto</a>
-        </ul>
-      </div>
-
-      <!-- Línea decorativa -->
-      <img
-        src="../assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
-    </footer>
   </body>
 </html>

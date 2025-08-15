@@ -53,14 +53,17 @@ body {
 /* =========================== CONTENEDORES =========================== */
 
 .section {
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   background-color: hsl(40, 60%, 98%);
-  color: #663399;
   text-align: center;
+
+  > p {
+    margin-bottom: 40px;
+  }
 
   &__header {
     max-width: 800px;
-    margin: 0 auto 60px;
+    margin: 0 auto 40px;
 
     .icon {
       font-size: 24px;
@@ -104,6 +107,14 @@ body {
   }
 }
 
+/* =========================== Linea divisora =========================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ccacdb, transparent);
+  margin: 20px auto;
+  max-width: 300px;
+}
+
 /* =========================== pendiente =========================== */
 
 .sobre-mi .sobremi-encabezado {
@@ -112,15 +123,12 @@ body {
   justify-content: space-between;
 }
 
-.sobre-mi .sobremi-foto {
+.section .foto-inicio {
   display: flex;
   align-items: stretch;
-}
-
-.sobre-mi .sobremi-foto img {
   height: 100%;
   width: auto;
   max-height: none;
   object-fit: cover;
-  border-radius: 0; /* puedes quitarlo o ajustarlo */
+  border-radius: 0;
 }

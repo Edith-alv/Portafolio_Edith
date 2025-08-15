@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EdithLopez - Portafolio</title>
 
-    <!-- Bootstrap CSS -->
+    <!---------------------------- Bootstrap CSS ---------------------------->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,22 +15,22 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
-    <!-- Estilos personalizados -->
+    <!---------------------------- Estilos personalizados ---------------------------->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <!-- Botón hamburguesa (solo mobile) -->
+    <!---------------------------- Botón hamburguesa (solo mobile) ---------------------------->
     <button class="burger" id="burger-btn">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Overlay para cerrar menú -->
+    <!---------------------------- Overlay para cerrar menú ---------------------------->
     <div class="menu-overlay" id="menu-overlay"></div>
 
-    <!-- Menú lateral (solo mobile) -->
+    <!---------------------------- Menú lateral (solo mobile) ---------------------------->
     <nav id="side-menu">
       <ul>
         <li><a href="./index.html" class="activo">Inicio</a></li>
@@ -41,7 +41,7 @@
       </ul>
     </nav>
 
-    <!-- Navbar (solo tablet y desktop) -->
+    <!---------------------------- Navbar (solo tablet y desktop) ---------------------------->
     <header>
       <nav>
         <ul>
@@ -54,46 +54,138 @@
       </nav>
     </header>
 
-</head>
+    <!---------------------------- Contenido ---------------------------->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                ¡Hola! Soy <span class="highlight">Edith López</span>
+              </h1>
+              <h2 class="hero-subtitle">UI Designer</h2>
+              <p class="hero-description">
+                Transformo ideas en experiencias digitales funcionales y
+                atractivas. Con background en enfermería y una pasión enorme por
+                el diseño, creo interfaces que conectan con las personas.
+              </p>
+              <div class="hero-actions">
+                <a href="./pages/proyectos.html" class="btn btn-primary"
+                  >Ver proyectos</a
+                >
+                <a href="./pages/contacto.html" class="btn btn-secondary"
+                  >Contáctame</a
+                >
+              </div>
+            </div>
+            <div class="hero-image">
+              <img
+                src="./assets/img/foto-rectangulo-Edith.png"
+                alt="Foto de Edith López, UI Designer"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-<body>
-
-  <!-- Contenido -->
-<section class="sobre-mi">
-  <div class="sobremi-encabezado">
-    <div class="sobremi-foto">
-      <img src="./assets/Imagenes/Foto portafolio Edith.png" alt="Foto de Edith López" />
-    </div>
-    <div class="sobremi-texto">
-      <h2>Portafolio</h2>
-      <h3>UI Designer en formación</h3>
-      <p>Experiencia en diseño web y plataformas digitales</p>
-      <p>¡Hola! Soy Edith López, UI Designer en formación con background en enfermería y una pasión enorme por transformar ideas en experiencias digitales funcionales.</p>
-    </div>
-  </div>
-</section>
+      <!-- Skills Summary Section -->
+      <section class="skills-summary">
+        <div class="container">
+          <h3 class="skills-title">Mis habilidades principales</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="bi bi-palette skill-icon"></i>
+              <h4>Diseño UI</h4>
+              <p>Interfaces visuales atractivas y funcionales</p>
+            </div>
+            <div class="skill-item">
+              <i class="bi bi-phone skill-icon"></i>
+              <h4>Prototipado en Figma</h4>
+              <p>Prototipos interactivos y wireframes</p>
+            </div>
+            <div class="skill-item">
+              <i class="bi bi-grid-3x3-gap skill-icon"></i>
+              <h4>Design Systems</h4>
+              <p>Sistemas de diseño consistentes y escalables</p>
+            </div>
+            <div class="skill-item">
+              <i class="bi bi-people skill-icon"></i>
+              <h4>Soft Skills</h4>
+              <p>Comunicación, empatía y trabajo en equipo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <!-- Navegación del footer -->
-      <div class="footer-nav">
-        <a href="./index.html" class="activo">Inicio</a>
-        <a href="./pages/sobre-mi.html">Sobre mí</a>
-        <a href="./pages/proyectos.html">Proyectos</a>
-        <a href="./pages/servicios.html">Servicios</a>
-        <a href="./pages/contacto.html">Contacto</a>
+      <!-- Elementos decorativos de fondo -->
+      <div class="footer-bg-decoration">
+        <div class="decoration-circle decoration-circle-1"></div>
+        <div class="decoration-circle decoration-circle-2"></div>
       </div>
 
-      <!-- Línea decorativa -->
-      <img
-        src="./Assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
+      <div class="footer-container">
+        <!-- Navegación principal -->
+        <nav class="footer-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="../index.html" class="nav-link active">Inicio</a>
+            </li>
+            <li>
+              <a href="../pages/sobre-mi.html" class="nav-link">Sobre mí</a>
+            </li>
+            <li>
+              <a href="../pages/proyectos.html" class="nav-link">Proyectos</a>
+            </li>
+            <li>
+              <a href="../pages/servicios.html" class="nav-link">Servicios</a>
+            </li>
+            <li>
+              <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Línea decorativa -->
+        <div class="decorative-line">
+          <div class="line-gradient"></div>
+          <div class="line-dot"></div>
+        </div>
+
+        <!-- Copy principal -->
+        <div class="footer-signature">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>México</span>
+          </div>
+          <h3 class="signature-title">Diseño desde México para el mundo</h3>
+          <p class="signature-description">
+            Creando experiencias digitales únicas con pasión mexicana y visión
+            global
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Hecho con ❤️ en México</p>
+        </div>
+      </div>
+
+      <!-- Barra de gradiente inferior -->
+      <div class="footer-gradient-bar"></div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Script para actualizar año -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <!---------------------------- Bootstrap JS ---------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript para el menú hamburguesa -->
@@ -102,23 +194,18 @@
       const menu = document.getElementById("side-menu");
       const overlay = document.getElementById("menu-overlay");
 
-      // Función para abrir/cerrar menú
       function toggleMenu() {
         burger.classList.toggle("open");
         menu.classList.toggle("open");
         overlay.classList.toggle("open");
-
-        // Prevenir scroll del body cuando el menú está abierto
         document.body.style.overflow = menu.classList.contains("open")
           ? "hidden"
           : "auto";
       }
 
-      // Event listeners
       burger.addEventListener("click", toggleMenu);
       overlay.addEventListener("click", toggleMenu);
 
-      // Cerrar menú al hacer clic en un enlace
       document.querySelectorAll("#side-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           burger.classList.remove("open");
@@ -128,14 +215,12 @@
         });
       });
 
-      // Cerrar menú con tecla Escape
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && menu.classList.contains("open")) {
           toggleMenu();
         }
       });
 
-      // Manejar redimensionamiento de ventana
       window.addEventListener("resize", () => {
         if (window.innerWidth > 768 && menu.classList.contains("open")) {
           burger.classList.remove("open");

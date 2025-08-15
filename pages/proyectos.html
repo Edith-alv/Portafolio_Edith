@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EdithLopez</title>
 
-    <!-- bootstrap -->
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,17 +22,13 @@
   </head>
 
   <body>
-    <!-- Botón hamburguesa (solo mobile) -->
+    <!-- ====================== NAVBAR MOBILE ====================== -->
     <button class="burger" id="burger-btn">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
-    <!-- Overlay para cerrar menú -->
     <div class="menu-overlay" id="menu-overlay"></div>
-
-    <!-- Menú lateral (solo mobile) -->
     <nav id="side-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -43,7 +39,7 @@
       </ul>
     </nav>
 
-    <!-- NavBar clásico (solo tablet y desktop) -->
+    <!-- ====================== NAVBAR DESKTOP ====================== -->
     <header>
       <nav>
         <ul>
@@ -56,229 +52,209 @@
       </nav>
     </header>
 
-    <!-- Sección principal -->
-    
-    </style>
-</head>
-<body>
+    <!-- ====================== SECCIÓN PROYECTOS ====================== -->
+    <section class="projects-section">
+      <div class="container">
+        <!-- Título principal de la sección -->
+        <h1>Proyectos</h1>
 
-    <!-- Sección Proyectos -->
-    <section class="proyectos" id="proyectos">
-        <div class="proyectos__container">
-            <!-- Header de la sección -->
-            <div class="proyectos__header">
-                <h2 class="proyectos__title">MIS PROYECTOS</h2>
-                <p class="proyectos__subtitle">Explora mi trabajo como UI Designer en formación</p>
-                <div class="barra-decorativa"></div>
+        <!-- Descripción de la sección -->
+        <p class="parrafo text-center mb-5">
+          Estas son algunas de las soluciones que he diseñado en distintas
+          etapas de mi formación y experiencia profesional.
+        </p>
+
+        <!-- Contenedor de todas las tarjetas de proyectos -->
+        <div class="projects-grid">
+          <!-- ====================== PROYECTO 1 ====================== -->
+          <div class="project-card">
+            <!-- Imagen del proyecto con overlay y botón -->
+            <div class="project-image">
+              <img src="../assets/img/leafly.png" alt="App leafly" />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <!-- Botón Ver detalles -->
+                  <a
+                    href="https://docs.google.com/presentation/d/1EN254YcN20oaJoSD_se7anzrud75i8QrvcUfIzK4G1k/edit?usp=sharing"
+                    class="btn-action btn-demo"
+                  >
+                    <i class="fa-solid fa-link action-icon"></i> Ver detalles
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <!-- Grid de proyectos -->
-            <div class="proyectos__grid">
-                
-                <!-- Proyecto 1: App de Plantas (Destacado) -->
-                <article class="proyecto proyecto--destacado">
-                    <div class="proyecto__status">Proyecto Académico</div>
-                    <div class="proyecto__image">
-                        <div class="proyecto__placeholder">🌱</div>
-                    </div>
-                    <div class="proyecto__content">
-                        <span class="proyecto__category">Aplicación Móvil</span>
-                        <h3 class="proyecto__title">PlantCare - App para Cuidado de Plantas</h3>
-                        <p class="proyecto__description">
-                            Aplicación móvil diseñada como proyecto académico para ayudar a los usuarios a cuidar sus plantas. 
-                            Incluye recordatorios de riego, identificación de plantas, consejos de cuidado y una comunidad 
-                            de amantes de las plantas.
-                        </p>
-                        <div class="proyecto__tech">
-                            <span class="tech-tag">UI/UX Design</span>
-                            <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">Prototipado</span>
-                            <span class="tech-tag">User Research</span>
-                            <span class="tech-tag">Mobile First</span>
-                        </div>
-                        <div class="proyecto__actions">
-                            <a href="#" class="btn btn--primary">
-                                <span>👁️</span> Ver Prototipo
-                            </a>
-                            <a href="#" class="btn btn--secondary">
-                                <span>📱</span> Proceso de Diseño
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Proyecto 2: Sitio Web -->
-                <article class="proyecto">
-                    <div class="proyecto__status">Práctica Profesional</div>
-                    <div class="proyecto__image">
-                        <div class="proyecto__placeholder">🌐</div>
-                    </div>
-                    <div class="proyecto__content">
-                        <span class="proyecto__category">Desarrollo Web</span>
-                        <h3 class="proyecto__title">Sitio Web Corporativo</h3>
-                        <p class="proyecto__description">
-                            Desarrollo y diseño de sitio web corporativo durante mi práctica profesional. 
-                            Enfoque en experiencia de usuario, diseño responsivo y optimización para 
-                            motores de búsqueda.
-                        </p>
-                        <div class="proyecto__tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive Design</span>
-                            <span class="tech-tag">SEO</span>
-                        </div>
-                        <div class="proyecto__actions">
-                            <a href="#" class="btn btn--primary">
-                                <span>🚀</span> Ver Sitio
-                            </a>
-                            <a href="#" class="btn btn--secondary">
-                                <span>💻</span> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Proyecto 3: Próximo Proyecto -->
-                <article class="proyecto">
-                    <div class="proyecto__status">En Desarrollo</div>
-                    <div class="proyecto__image">
-                        <div class="proyecto__placeholder">🚧</div>
-                    </div>
-                    <div class="proyecto__content">
-                        <span class="proyecto__category">UI/UX Design</span>
-                        <h3 class="proyecto__title">Próximo Proyecto</h3>
-                        <p class="proyecto__description">
-                            Actualmente trabajando en un nuevo proyecto que combina mis habilidades 
-                            en diseño UI/UX con mi background en enfermería. Una plataforma digital 
-                            para mejorar la experiencia del paciente.
-                        </p>
-                        <div class="proyecto__tech">
-                            <span class="tech-tag">En Progreso</span>
-                            <span class="tech-tag">UI Design</span>
-                            <span class="tech-tag">Healthcare</span>
-                            <span class="tech-tag">Research</span>
-                        </div>
-                        <div class="proyecto__actions">
-                            <a href="#" class="btn btn--secondary">
-                                <span>⏳</span> Próximamente
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
+            <!-- Contenido del proyecto -->
+            <div class="project-content">
+              <!-- Título del proyecto -->
+              <h3>Leafly</h3>
+              <!-- Descripción breve -->
+              <p class="parrafo">
+                <strong>🎓 Proyecto académico</strong>
+              </p>
+              <p class="parrafo">
+                Diseñada desde cero con enfoque Mobile First. Me encargué de
+                todo el proceso: User Research, flujos, wireframes y prototipo
+                interactivo en Figma.
+              </p>
+              <!-- Tecnologías usadas -->
+              <div class="project-technologies">
+                <span class="tech-tag">🎨 Figma</span>
+                <span class="tech-tag">📱 Prototyping</span>
+                <span class="tech-tag">👥 User Research</span>
+                <span class="tech-tag">🎯 Design Systems</span>
+              </div>
             </div>
+          </div>
+
+          <!-- ====================== PROYECTO 2 ====================== -->
+          <div class="project-card">
+            <!-- Imagen del proyecto con overlay y botón -->
+            <div class="project-image">
+              <img src="../assets/img/cinemex.png" alt="cinemex" />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <!-- Botón Ver detalles -->
+                  <a
+                    href="https://www.figma.com/design/YguYIRCM9QS36gd78TGbo0/UX-UI-Edith-Lopez?node-id=516-111007&t=DRbVzXbHH7vecR3E-1"
+                    class="btn-action btn-demo"
+                  >
+                    <i class="fa-solid fa-link action-icon"></i> Ver detalles
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenido del proyecto -->
+            <div class="project-content">
+              <!-- Título del proyecto -->
+              <h3>Cinemex.com</h3>
+              <!-- Descripción breve -->
+              <p class="parrafo">
+                <strong>🎓 Proyecto académico</strong>
+              </p>
+              <p class="parrafo">
+                Mejoré la experiencia de usuario de la web de Cinemex. Realicé
+                investigación UX, encuestas, arquitectura de navegación,
+                wireframes y prototipos en Figma.
+              </p>
+              <!-- Tecnologías usadas -->
+              <div class="project-technologies">
+                <span class="tech-tag">🎨 Figma</span>
+                <span class="tech-tag">📱 Prototyping</span>
+                <span class="tech-tag">👥 User Research</span>
+                <span class="tech-tag">🎯 Design Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ====================== PROYECTO 3 ====================== -->
+          <div class="project-card">
+            <!-- Imagen del proyecto con overlay y botón -->
+            <div class="project-image">
+              <img src="../assets/img/klibu" alt="Klibu" />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <!-- Botón Ver detalles -->
+                  <a href="https://www.klibu.mx/" class="btn-action btn-demo">
+                    <i class="fa-solid fa-link action-icon"></i> Ver detalles
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenido del proyecto -->
+            <div class="project-content">
+              <!-- Título del proyecto -->
+              <h3>Sitio Web Corporativo</h3>
+              <!-- Descripción breve -->
+              <p class="parrafo">
+                <strong>💻 Práctica profesional</strong>
+              </p>
+              <p class="parrafo">
+                Diseño y desarrollo web con enfoque en UX clara, diseño
+                responsive y optimización SEO.
+              </p>
+              <!-- Tecnologías usadas -->
+              <div class="project-technologies">
+                <span class="tech-tag">🎨 Figma</span>
+                <span class="tech-tag">📱 Prototyping</span>
+                <span class="tech-tag">👥 User Research</span>
+                <span class="tech-tag">🎯 Design Systems</span>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- /projects-grid -->
+      </div>
+      <!-- /container -->
     </section>
 
-    <script>
-        // Animación de entrada para los proyectos
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observar todos los proyectos
-        document.querySelectorAll('.proyecto').forEach(proyecto => {
-            proyecto.style.opacity = '0';
-            proyecto.style.transform = 'translateY(30px)';
-            proyecto.style.transition = 'all 0.6s ease';
-            observer.observe(proyecto);
-        });
-    </script>
-
-    <!-- bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      const burger = document.getElementById("burger-btn");
-      const menu = document.getElementById("side-menu");
-      const overlay = document.getElementById("menu-overlay");
-
-      // Función para abrir/cerrar menú
-      function toggleMenu() {
-        burger.classList.toggle("open");
-        menu.classList.toggle("open");
-        overlay.classList.toggle("open");
-
-        // Prevenir scroll del body cuando el menú está abierto
-        document.body.style.overflow = menu.classList.contains("open")
-          ? "hidden"
-          : "auto";
-      }
-
-      // Event listeners
-      burger.addEventListener("click", toggleMenu);
-      overlay.addEventListener("click", toggleMenu);
-
-      // Cerrar menú al hacer clic en un enlace
-      document.querySelectorAll("#side-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          burger.classList.remove("open");
-          menu.classList.remove("open");
-          overlay.classList.remove("open");
-          document.body.style.overflow = "auto";
-        });
-      });
-
-      // Cerrar menú con tecla Escape
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && menu.classList.contains("open")) {
-          toggleMenu();
-        }
-      });
-
-      // Manejar redimensionamiento de ventana
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 768 && menu.classList.contains("open")) {
-          burger.classList.remove("open");
-          menu.classList.remove("open");
-          overlay.classList.remove("open");
-          document.body.style.overflow = "auto";
-        }
-      });
-    </script>
-
-    <!-- FOOTER COMPLETO -->
+    <!-- Footer -->
     <footer class="footer">
-      <!-- Menú inferior -->
-      <div class="footer-nav">
-        <ul>
-          <a href="../index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="./sobre-mi.html">Sobre mí</a>
-        </ul>
-        <ul>
-          <a href="./proyectos.html" class="activo">Proyectos</a>
-        </ul>
-        <ul>
-          <a href="./servicios.html">Servicios</a>
-        </ul>
-        <ul>
-          <a href="./contacto.html">Contacto</a>
-        </ul>
+      <!-- Elementos decorativos de fondo -->
+      <div class="footer-bg-decoration">
+        <div class="decoration-circle decoration-circle-1"></div>
+        <div class="decoration-circle decoration-circle-2"></div>
       </div>
 
-      <!-- Línea decorativa -->
-      <img
-        src="../assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
+      <div class="footer-container">
+        <!-- Navegación principal -->
+        <nav class="footer-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="../index.html" class="nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="../pages/sobre-mi.html" class="nav-link">Sobre mí</a>
+            </li>
+            <li>
+              <a href="../pages/proyectos.html" class="nav-link active"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a href="../pages/servicios.html" class="nav-link">Servicios</a>
+            </li>
+            <li>
+              <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Línea decorativa -->
+        <div class="decorative-line">
+          <div class="line-gradient"></div>
+          <div class="line-dot"></div>
+        </div>
+
+        <!-- Copy principal -->
+        <div class="footer-signature">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>México</span>
+          </div>
+          <h3 class="signature-title">Diseño desde México para el mundo</h3>
+          <p class="signature-description">
+            Creando experiencias digitales únicas con pasión mexicana y visión
+            global
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Hecho con ❤️ en México</p>
+        </div>
+      </div>
+
+      <!-- Barra de gradiente inferior -->
+      <div class="footer-gradient-bar"></div>
     </footer>
+
+    <!-- Script para actualizar año -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>

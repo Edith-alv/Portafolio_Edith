@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- estilos -->
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
@@ -25,10 +25,8 @@
       <span></span>
     </button>
 
-    <!-- Overlay -->
+    <!-- Overlay y menú mobile -->
     <div class="menu-overlay" id="menu-overlay"></div>
-
-    <!-- Menú lateral mobile -->
     <nav id="side-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
@@ -39,7 +37,7 @@
       </ul>
     </nav>
 
-    <!-- Navbar desktop/tablet -->
+    <!-- Navbar escritorio -->
     <header>
       <nav>
         <ul>
@@ -52,120 +50,214 @@
       </nav>
     </header>
 
-    <!-- Contenido principal -->
-    <section class="sobre-mi">
-      <!-- Presentación -->
-
-      <div class="sobremi-encabezado">
-        <div class="sobremi-texto">
-          <h2>Sobre mí</h2>
-          <p>
-            Mi nombre es Edith, y aunque <strong>mi camino profesional</strong>
-            comenzó en la enfermería —de la cual tengo título— siempre tuve una
-            <strong>fuerte atracción por el mundo digital</strong>.
+    <!-- Sección Sobre mí -->
+    <section class="section">
+      <div class="section__header">
+        <h1>Sobre mí</h1>
+        <div class="intro-content">
+          <p class="intro-paragraph">
+            Mi nombre es <strong>Edith</strong>, y aunque mi camino profesional
+            comenzó en la <strong>enfermería</strong> —de la cual tengo título—
+            siempre tuve una fuerte atracción por el
+            <strong>mundo digital</strong>.
           </p>
-          <p>
-            En 2024 decidí dar el salto y comenzar mi formación en
-            <strong>diseño UX/UI</strong>, convencida de que el diseño también
-            puede <strong>sanar, conectar y transformar</strong>.
+          <p class="intro-paragraph">
+            En <strong>2024</strong> decidí dar el salto y comenzar mi formación
+            en <strong>diseño UX/UI</strong>, convencida de que el diseño
+            también puede <strong>sanar, conectar y transformar</strong>.
           </p>
         </div>
       </div>
-
-      <!-- Educación -->
-      <section class="educacion">
-        <h3>Educación</h3>
-        <p>Actualmente curso la carrera de Desarrollo UX/UI en Coderhouse.</p>
-
-        <div class="etapas">
-          <div class="etapa">
-            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
-            <p>
-              <strong>Photoshop e Illustrator</strong><br />junio – agosto 2024
-            </p>
-          </div>
-
-          <div class="etapa">
-            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
-            <p><strong>Diseño UX/UI básico</strong><br />ago – nov 2024</p>
-          </div>
-          <div class="etapa">
-            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
-            <p><strong>Diseño UX/UI avanzado</strong><br />mar – jun 2024</p>
-          </div>
-          <div class="etapa">
-            <img src="../assets/Imagenes/Coderhouse.png" alt="Coderhouse" />
-            <p><strong>Desarrollo Web</strong><br />En curso</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experiencia -->
-      <section class="experiencia">
-        <h3>Experiencia Laboral</h3>
-        <p>
-          Desde hace más de 6 meses me desempeño como
-          <strong>UI Designer</strong> en prácticas dentro de una empresa de
-          tecnología...
-        </p>
-        <div class="cards-experiencia">
-          <div class="card-exp">
-            <img src="../Assets/Imagenes/WIX.png" alt="Wix" />
-            <p>
-              <strong>Diseño web en Wix Studio</strong><br />Desde cero a
-              publicado, mantenimiento y actualizaciones.
-            </p>
-          </div>
-          <div class="card-exp">
-            <img src="../Assets/Imagenes/Figma.png" alt="Plataforma" />
-            <p>
-              <strong>Plataforma de verificación</strong><br />Responsive UI,
-              prototipos navegables, handoffs.
-            </p>
-          </div>
-          <div class="card-exp">
-            <img src="../Assets/Imagenes/Handoff.png" alt="White Label" />
-            <p>
-              <strong>Visual white-label</strong><br />Adaptación de experiencia
-              para distintas marcas.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Herramientas -->
-      <section class="herramientas">
-        <h3>Software y Herramientas</h3>
-        <div class="iconos-herramientas">
-          <img src="../Assets/Imagenes/FigmaSoftwarew.png" alt="Figma" />
-          <img src="../Assets/Imagenes/software - wix.png" alt="Wix" />
-          <img
-            src="../Assets/Imagenes/software - ps ai.png"
-            alt="Photoshop e Illustrator"
-          />
-          <img src="../Assets/Imagenes/VS.png" alt="VS Code" />
-        </div>
-      </section>
+      <div class="section-divider"></div>
     </section>
 
-    <!-- =================== FOOTER COMPLETO =================== -->
+    <!-- Sección Educación -->
+    <section class="section">
+      <h2>Educación</h2>
+      <p>Actualmente curso la carrera de Desarrollo UX/UI en Coderhouse.</p>
+
+      <div class="cards-grid">
+        <div class="card-item">
+          <img src="../assets/img/coderhouse.png" alt="Coderhouse" />
+          <p>
+            <strong>Photoshop e Illustrator</strong><br />junio – agosto 2024
+          </p>
+        </div>
+
+        <div class="card-item">
+          <img src="../assets/img/coderhouse.png" alt="Coderhouse" />
+          <p><strong>Diseño UX/UI básico</strong><br />ago – nov 2024</p>
+        </div>
+
+        <div class="card-item">
+          <img src="../assets/img/coderhouse.png" alt="Coderhouse" />
+          <p><strong>Diseño UX/UI avanzado</strong><br />mar – jun 2025</p>
+        </div>
+
+        <div class="card-item">
+          <img src="../assets/img/coderhouse.png" alt="Coderhouse" />
+          <p><strong>Desarrollo Web</strong><br />jun - ago 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia laboral -->
+    <section class="section">
+      <h2>Experiencia Laboral</h2>
+      <p class="subtitulo">
+        Desde hace más de 8 meses me desempeño como <strong>UI Designer</strong
+        ><br />
+        dentro de una empresa de tecnología, aplicando mis conocimientos en
+        <strong>entornos reales</strong> y colaborando con
+        <strong>equipos multidisciplinarios</strong>.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card-item">
+          <img src="../assets/img/experiencia-wix.png" alt="wix" />
+          <p>
+            <strong>Diseño web en Wix Studio</strong><br />
+            Desde cero a publicado, mantenimiento y actualizaciones.
+          </p>
+        </div>
+
+        <div class="card-item">
+          <img src="../assets/img/experiencia-figma.png" alt="Plataforma" />
+          <p>
+            <strong>Plataforma de verificación</strong><br />
+            Responsive UI, prototipos navegables, handoffs.
+          </p>
+        </div>
+
+        <div class="card-item">
+          <img
+            src="../assets/img/experiencia-whitelabel.png"
+            alt="White Label"
+          />
+          <p>
+            <strong>Visual white-label</strong><br />
+            Adaptación de experiencia para distintas marcas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Herramientas -->
+    <section class="section">
+      <h2>Software y herramientas</h2>
+
+      <div class="tools-grid">
+        <div class="tool-item">
+          <img src="..//assets/img/FigmaSoftwarew.png" alt="Figma" />
+          <p>
+            Figma<br /><strong>(prototipado, UI, componentes, handoff)</strong>
+          </p>
+        </div>
+
+        <div class="divider-vertical"></div>
+
+        <div class="tool-item">
+          <img src="..//assets/img/software-wix.png" alt="Wix" />
+          <p>
+            Wix Studio<br /><strong>(diseño y desarrollo web visual)</strong>
+          </p>
+        </div>
+
+        <div class="divider-vertical"></div>
+
+        <div class="tool-item">
+          <img
+            src="..//assets/img/software-psai.png"
+            alt="Photoshop e Illustrator"
+          />
+          <p>
+            Adobe Photoshop & Illustrator<br /><strong
+              >(edición gráfica y diseño visual)</strong
+            >
+          </p>
+        </div>
+
+        <div class="divider-vertical"></div>
+
+        <div class="tool-item">
+          <img src="..//assets/img/VS.png" alt="VS Code" />
+          <p>
+            Visual Studio Code + HTML/CSS<br /><strong
+              >(en aprendizaje activo)</strong
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-nav">
-        <a href="../index.html">Inicio</a>
-        <a href="./sobre-mi.html" class="activo">Sobre mí</a>
-        <a href="./proyectos.html">Proyectos</a>
-        <a href="./servicios.html">Servicios</a>
-        <a href="./contacto.html">Contacto</a>
+      <!-- Elementos decorativos de fondo -->
+      <div class="footer-bg-decoration">
+        <div class="decoration-circle decoration-circle-1"></div>
+        <div class="decoration-circle decoration-circle-2"></div>
       </div>
 
-      <img
-        src="../assets/imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
+      <div class="footer-container">
+        <!-- Navegación principal -->
+        <nav class="footer-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="../index.html" class="nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="../pages/sobre-mi.html" class="nav-link active"
+                >Sobre mí</a
+              >
+            </li>
+            <li>
+              <a href="../pages/proyectos.html" class="nav-link">Proyectos</a>
+            </li>
+            <li>
+              <a href="../pages/servicios.html" class="nav-link">Servicios</a>
+            </li>
+            <li>
+              <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Línea decorativa -->
+        <div class="decorative-line">
+          <div class="line-gradient"></div>
+          <div class="line-dot"></div>
+        </div>
+
+        <!-- Copy principal -->
+        <div class="footer-signature">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>México</span>
+          </div>
+          <h3 class="signature-title">Diseño desde México para el mundo</h3>
+          <p class="signature-description">
+            Creando experiencias digitales únicas con pasión mexicana y visión
+            global
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Hecho con ❤️ en México</p>
+        </div>
+      </div>
+
+      <!-- Barra de gradiente inferior -->
+      <div class="footer-gradient-bar"></div>
     </footer>
 
-    <!-- =================== SCRIPT MENU =================== -->
+    <!-- Script para actualizar año -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <!-- Script menú hamburguesa -->
     <script>
       const burger = document.getElementById("burger-btn");
       const menu = document.getElementById("side-menu");
@@ -175,7 +267,6 @@
         burger.classList.toggle("open");
         menu.classList.toggle("open");
         overlay.classList.toggle("open");
-
         document.body.style.overflow = menu.classList.contains("open")
           ? "hidden"
           : "auto";

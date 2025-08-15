@@ -1,122 +1,108 @@
-.sobre-mi {
-  padding: 80px 40px;
-  background-color: #fdfbf7;
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .sobremi-encabezado {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+.card-item {
+  text-align: center;
+  padding: 32px 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    .sobremi-texto {
-      flex: 1;
-      max-width: 600px;
-      order: 1; /* Texto primero en desktop */
-
-      h2 {
-        font-size: 64px;
-        margin-bottom: 20px;
-        color: #fff;
-        font-weight: 700;
-        line-height: 1.1;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 18px;
-        color: #fff;
-
-        strong {
-          font-weight: 700;
-          color: #fff;
-        }
-      }
-    }
-
-    .sobremi-foto {
-      flex: 0 0 auto;
-      order: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 300px;
-        height: 300px;
-        padding: 5px;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-    }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(11, 90, 94, 0.1);
   }
 
-  .educacion,
-  .experiencia,
-  .herramientas {
-    margin-top: 80px;
-
-    h3 {
-      font-size: 32px;
-      color: #fff;
-      margin-bottom: 24px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+  img {
+    height: 40px;
+    margin-bottom: 16px;
   }
 
-  .etapas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 0;
 
-    .etapa {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 16px;
-      text-align: left;
-    }
-
-    img {
-      height: 40px;
-      margin-bottom: 12px;
+    strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
   }
+}
 
-  .cards-experiencia {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+.subtitulo {
+  font-size: 16px;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
 
-    .card-exp {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 16px;
-      max-width: 300px;
-    }
+/* =========================== INTRO SECTION =========================== */
 
-    img {
-      height: 40px;
-      margin-bottom: 12px;
-    }
+.intro-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.intro-paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.intro-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================== TOOLS =========================== */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(7, auto); /* 4 tools + 3 divisores */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+  gap: 10px;
+}
+
+/* Línea vertical */
+.divider-vertical {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #663399, transparent);
+}
+
+/* Responsive: en tablet o menos, se apilan */
+@media (max-width: 992px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
   }
 
-  .iconos-herramientas {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+  .divider-vertical {
+    display: none;
+  }
 
-    img {
-      height: 40px;
-      filter: brightness(1.1);
-    }
+  .tool-item {
+    max-width: 100%;
   }
 }

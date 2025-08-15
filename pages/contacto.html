@@ -138,33 +138,71 @@
       </div>
     </section>
 
-    <!-- FOOTER COMPLETO -->
+    <!-- Footer -->
     <footer class="footer">
-      <!-- Menú inferior -->
-      <div class="footer-nav">
-        <ul>
-          <a href="../index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="./sobre-mi.html">Sobre mí</a>
-        </ul>
-        <ul>
-          <a href="./proyectos.html">Proyectos</a>
-        </ul>
-        <ul>
-          <a href="./servicios.html">Servicios</a>
-        </ul>
-        <ul>
-          <a href="./contacto.html" class="activo">Contacto</a>
-        </ul>
+      <!-- Elementos decorativos de fondo -->
+      <div class="footer-bg-decoration">
+        <div class="decoration-circle decoration-circle-1"></div>
+        <div class="decoration-circle decoration-circle-2"></div>
       </div>
 
-      <!-- Línea decorativa -->
-      <img
-        src="../assets/Imagenes/27.png"
-        alt="línea decorativa"
-        class="footer-line-image"
-      />
+      <div class="footer-container">
+        <!-- Navegación principal -->
+        <nav class="footer-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="../index.html" class="nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="../pages/sobre-mi.html" class="nav-link">Sobre mí</a>
+            </li>
+            <li>
+              <a href="../pages/proyectos.html" class="nav-link">Proyectos</a>
+            </li>
+            <li>
+              <a href="../pages/servicios.html" class="nav-link">Servicios</a>
+            </li>
+            <li>
+              <a href="../pages/contacto.html" class="nav-link active"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Línea decorativa -->
+        <div class="decorative-line">
+          <div class="line-gradient"></div>
+          <div class="line-dot"></div>
+        </div>
+
+        <!-- Copy principal -->
+        <div class="footer-signature">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>México</span>
+          </div>
+          <h3 class="signature-title">Diseño desde México para el mundo</h3>
+          <p class="signature-description">
+            Creando experiencias digitales únicas con pasión mexicana y visión
+            global
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Hecho con ❤️ en México</p>
+        </div>
+      </div>
+
+      <!-- Barra de gradiente inferior -->
+      <div class="footer-gradient-bar"></div>
     </footer>
+
+    <!-- Script para actualizar año -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
